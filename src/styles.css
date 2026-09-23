@@ -1,0 +1,159 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   InvestNetwork — Global Stylesheet & Tailwind 4 Theme Integration
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "./theme.css";
+@import "tailwindcss";
+
+@theme {
+  /* ── SPECIAL ── */
+  --color-white: var(--ds-color-white);
+  --color-black: var(--ds-color-black);
+
+  /* ── BRAND ── */
+  --color-primary-50: var(--ds-color-brand-primary-50);
+  --color-primary-100: var(--ds-color-brand-primary-100);
+  --color-primary-200: var(--ds-color-brand-primary-200);
+  --color-primary-300: var(--ds-color-brand-primary-300);
+  --color-primary-400: var(--ds-color-brand-primary-400);
+  --color-primary-500: var(--ds-color-brand-primary-500);
+  --color-primary-600: var(--ds-color-brand-primary-600);
+  --color-primary-700: var(--ds-color-brand-primary-700);
+  --color-primary-800: var(--ds-color-brand-primary-800);
+  --color-primary-900: var(--ds-color-brand-primary-900);
+  --color-primary-950: var(--ds-color-brand-primary-950);
+
+  --color-accent-50: var(--ds-color-brand-accent-50);
+  --color-accent-100: var(--ds-color-brand-accent-100);
+  --color-accent-200: var(--ds-color-brand-accent-200);
+  --color-accent-300: var(--ds-color-brand-accent-300);
+  --color-accent-400: var(--ds-color-brand-accent-400);
+  --color-accent-500: var(--ds-color-brand-accent-500);
+  --color-accent-600: var(--ds-color-brand-accent-600);
+  --color-accent-700: var(--ds-color-brand-accent-700);
+  --color-accent-800: var(--ds-color-brand-accent-800);
+  --color-accent-900: var(--ds-color-brand-accent-900);
+  --color-accent-950: var(--ds-color-brand-accent-950);
+
+  --color-contrast-50: var(--ds-color-brand-contrast-50);
+  --color-contrast-100: var(--ds-color-brand-contrast-100);
+  --color-contrast-200: var(--ds-color-brand-contrast-200);
+  --color-contrast-300: var(--ds-color-brand-contrast-300);
+  --color-contrast-400: var(--ds-color-brand-contrast-400);
+  --color-contrast-500: var(--ds-color-brand-contrast-500);
+  --color-contrast-600: var(--ds-color-brand-contrast-600);
+  --color-contrast-700: var(--ds-color-brand-contrast-700);
+  --color-contrast-800: var(--ds-color-brand-contrast-800);
+  --color-contrast-900: var(--ds-color-brand-contrast-900);
+  --color-contrast-950: var(--ds-color-brand-contrast-950);
+
+  /* ── DESIGN: neutral ramp ── */
+  --color-neutral-50: var(--ds-color-design-neutral-50);
+  --color-neutral-100: var(--ds-color-design-neutral-100);
+  --color-neutral-200: var(--ds-color-design-neutral-200);
+  --color-neutral-300: var(--ds-color-design-neutral-300);
+  --color-neutral-400: var(--ds-color-design-neutral-400);
+  --color-neutral-500: var(--ds-color-design-neutral-500);
+  --color-neutral-600: var(--ds-color-design-neutral-600);
+  --color-neutral-700: var(--ds-color-design-neutral-700);
+  --color-neutral-800: var(--ds-color-design-neutral-800);
+  --color-neutral-900: var(--ds-color-design-neutral-900);
+  --color-neutral-950: var(--ds-color-design-neutral-950);
+
+  /* ── STATE: danger / error ── */
+  --color-danger-50: var(--ds-color-state-danger-50);
+  --color-danger-500: var(--ds-color-state-danger-500);
+  --color-danger-600: var(--ds-color-state-danger-600);
+  --color-danger-900: var(--ds-color-state-danger-900);
+
+  /* ── STATE: success ── */
+  --color-success-50: var(--ds-color-state-success-50);
+  --color-success-100: var(--ds-color-state-success-100);
+  --color-success-400: var(--ds-color-state-success-400);
+  --color-success-500: var(--ds-color-state-success-500);
+  --color-success-600: var(--ds-color-state-success-600);
+  --color-success-700: var(--ds-color-state-success-700);
+
+  /* ── STATE: warning ── */
+  --color-warning-50: var(--ds-color-state-warning-50);
+  --color-warning-100: var(--ds-color-state-warning-100);
+  --color-warning-400: var(--ds-color-state-warning-400);
+  --color-warning-500: var(--ds-color-state-warning-500);
+  --color-warning-600: var(--ds-color-state-warning-600);
+  --color-warning-900: var(--ds-color-state-warning-900);
+
+  /* ── STATE: info ── */
+  --color-info-50: var(--ds-color-state-info-50);
+  --color-info-500: var(--ds-color-state-info-500);
+  --color-info-600: var(--ds-color-state-info-600);
+
+  /* ── TOOLING SEMANTIC ROLES ── */
+  --color-page: var(--ds-color-tooling-page);
+  --color-container: var(--ds-color-tooling-area);
+  --color-row: var(--ds-color-tooling-row);
+  --color-section: var(--ds-color-tooling-section);
+  --color-subsection: var(--ds-color-tooling-subsection);
+
+  /* ── SEMANTIC SURFACES ── */
+  --color-surface: var(--ds-surface-body);
+  --color-surface-on: var(--ds-surface-body-on);
+  --color-surface-muted: var(--ds-surface-muted);
+  --color-surface-muted-on: var(--ds-surface-muted-on);
+  --color-border: var(--ds-border-default);
+  --color-fg: var(--ds-surface-body-on);
+  --color-fg-muted: var(--ds-text-muted);
+
+  /* ── NON-COLOR TOKENS ── */
+  --font-sans: var(--ds-font-sans);
+  --font-mono: var(--ds-font-mono);
+
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+
+  --shadow-sm: var(--ds-shadow-sm);
+  --shadow-md: var(--ds-shadow-md);
+  --shadow-lg: var(--ds-shadow-lg);
+}
+
+/* Base custom scrollbar and aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ds-color-tooling-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ds-color-brand-primary-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ds-color-brand-accent-500);
+}
+
+.font-mono-numbers {
+  font-family: var(--ds-font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Glassmorphic dock styling */
+.glass-dock {
+  background: rgba(7, 21, 26, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(223, 183, 108, 0.22);
+}
+
+.glass-dock-subtle {
+  background: rgba(12, 32, 39, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

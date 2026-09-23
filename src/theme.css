@@ -1,0 +1,160 @@
+/* ═════════════════════════════════════════════════════════════════════════
+   InvestNetwork — Design System & Semantic Tokens (theme.css)
+   PropTech Enterprise Design Guidelines
+   Brand Primary: Petroleum Blue (#0c4a58)
+   Fiduciary Accent: Metallic Gold / Amber (#dfb76c)
+   Performance Indicator: Emerald Green (#10b981)
+   ═════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── SPECIAL ── */
+  --ds-color-white: #ffffff;
+  --ds-color-black: #060e11;
+
+  /* ── BRAND: Petroleum Blue Ramp ── */
+  --ds-color-brand-primary-50: #f0f7f8;
+  --ds-color-brand-primary-100: #dbeef2;
+  --ds-color-brand-primary-200: #b9dee6;
+  --ds-color-brand-primary-300: #88c5d3;
+  --ds-color-brand-primary-400: #50a5bc;
+  --ds-color-brand-primary-500: #2d88a0;
+  --ds-color-brand-primary-600: #1b6d83;
+  --ds-color-brand-primary-700: #13596b;
+  --ds-color-brand-primary-800: #0f4f5f;
+  --ds-color-brand-primary-900: #0c4a58; /* Official Brand Color */
+  --ds-color-brand-primary-950: #06262e;
+  --ds-color-brand-primary: #0c4a58;
+
+  /* ── BRAND ACCENT: Metallic Gold / Amber Ramp ── */
+  --ds-color-brand-accent-50: #fbf8ef;
+  --ds-color-brand-accent-100: #f6efdc;
+  --ds-color-brand-accent-200: #eddcb9;
+  --ds-color-brand-accent-300: #e3c791;
+  --ds-color-brand-accent-400: #dfb76c; /* Official Gold Accent */
+  --ds-color-brand-accent-500: #d19f4d;
+  --ds-color-brand-accent-600: #be843c;
+  --ds-color-brand-accent-700: #9e6732;
+  --ds-color-brand-accent-800: #80532d;
+  --ds-color-brand-accent-900: #6a4427;
+  --ds-color-brand-accent-950: #3c2313;
+  --ds-color-brand-accent: #dfb76c;
+
+  /* ── SECONDARY & CONTRAST ── */
+  --ds-color-brand-contrast-50: #f8fafc;
+  --ds-color-brand-contrast-100: #f1f5f9;
+  --ds-color-brand-contrast-500: #64748b;
+  --ds-color-brand-contrast-900: #0f172a;
+  --ds-color-brand-contrast-950: #020617;
+  --ds-color-brand-contrast: #0f172a;
+
+  --ds-color-brand-secondary-50: #f4f6f8;
+  --ds-color-brand-secondary-500: #475569;
+  --ds-color-brand-secondary-900: #1e293b;
+  --ds-color-brand-secondary: #1e293b;
+
+  --ds-color-brand-dark-50: #f1f5f9;
+  --ds-color-brand-dark-500: #334155;
+  --ds-color-brand-dark-900: #091a21;
+  --ds-color-brand-dark-950: #040c10;
+  --ds-color-brand-dark: #071f25;
+
+  /* ── DESIGN NEUTRALS ── */
+  --ds-color-design-neutral-50: #f8fafc;
+  --ds-color-design-neutral-100: #f1f5f9;
+  --ds-color-design-neutral-200: #e2e8f0;
+  --ds-color-design-neutral-300: #cbd5e1;
+  --ds-color-design-neutral-400: #94a3b8;
+  --ds-color-design-neutral-500: #64748b;
+  --ds-color-design-neutral-600: #475569;
+  --ds-color-design-neutral-700: #334155;
+  --ds-color-design-neutral-800: #1e293b;
+  --ds-color-design-neutral-900: #0f172a;
+  --ds-color-design-neutral-950: #081116;
+
+  /* ── STATES ── */
+  --ds-color-state-success-50: #ecfdf5;
+  --ds-color-state-success-100: #d1fae5;
+  --ds-color-state-success-400: #34d399;
+  --ds-color-state-success-500: #10b981;
+  --ds-color-state-success-600: #059669;
+  --ds-color-state-success-700: #047857;
+  --ds-color-state-success-900: #064e3b;
+  --ds-color-state-success: #10b981;
+
+  --ds-color-state-warning-50: #fefce8;
+  --ds-color-state-warning-100: #fef9c3;
+  --ds-color-state-warning-400: #facc15;
+  --ds-color-state-warning-500: #dfb76c;
+  --ds-color-state-warning-600: #ca8a04;
+  --ds-color-state-warning-900: #713f12;
+  --ds-color-state-warning: #dfb76c;
+
+  --ds-color-state-danger-50: #fef2f2;
+  --ds-color-state-danger-100: #fee2e2;
+  --ds-color-state-danger-500: #ef4444;
+  --ds-color-state-danger-600: #dc2626;
+  --ds-color-state-danger-900: #7f1d1d;
+  --ds-color-state-danger: #ef4444;
+
+  --ds-color-state-info-50: #eff6ff;
+  --ds-color-state-info-500: #3b82f6;
+  --ds-color-state-info-600: #2563eb;
+  --ds-color-state-info-900: #1e3a8a;
+  --ds-color-state-info: #3b82f6;
+
+  /* ── TOOLING & CONTAINER SEMANTICS (Warm Architectural Beige Palette) ── */
+  --ds-color-tooling-page: #f5f2eb;
+  --ds-color-tooling-area: #ffffff;
+  --ds-color-tooling-row: #faf8f5;
+  --ds-color-tooling-section: #efebe2;
+  --ds-color-tooling-subsection: #e7e2d6;
+
+  /* ── SURFACE SEMANTICS ── */
+  --ds-surface-body: #f5f2eb;
+  --ds-surface-body-on: #0f172a;
+  --ds-surface-muted: #eae5da;
+  --ds-surface-muted-on: #475569;
+  --ds-border-default: #ded7cb;
+  --ds-text-muted: #64748b;
+
+  /* ── DIRECT SEMANTIC SHORTCUTS REQUIRED BY SPEC ── */
+  --bg-page: var(--ds-color-tooling-page);
+  --bg-container: var(--ds-color-tooling-area);
+  --bg-row: var(--ds-color-tooling-row);
+  --bg-section: var(--ds-color-tooling-section);
+  --bg-surface: var(--ds-surface-body);
+  --bg-surface-muted: var(--ds-surface-muted);
+
+  --color-primary: var(--ds-color-brand-primary-900);
+  --color-primary-light: var(--ds-color-brand-primary-500);
+  --color-warning: var(--ds-color-brand-accent-400);
+  --color-success: var(--ds-color-state-success-500);
+  --color-surface-on: var(--ds-surface-body-on);
+  --color-fg: var(--ds-surface-body-on);
+  --color-fg-muted: var(--ds-text-muted);
+
+  /* ── FONTS ── */
+  --ds-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ds-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: var(--ds-font-sans);
+  --font-mono: var(--ds-font-mono);
+
+  /* ── RADIUS ── */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 14px;
+  --ds-radius-xl: 20px;
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+
+  /* ── SHADOWS ── */
+  --ds-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  --ds-shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.35);
+  --ds-shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.5);
+
+  --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ds-duration-fast: 150ms;
+  --ds-duration-normal: 250ms;
+}

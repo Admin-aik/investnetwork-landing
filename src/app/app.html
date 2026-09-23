@@ -1,0 +1,67 @@
+<div class="min-h-screen flex flex-col bg-[#f5f2eb] text-slate-900 selection:bg-amber-400/40 selection:text-slate-950">
+  <!-- Top Navigation (Siempre presente y sticky en todas las secciones) -->
+  <app-navbar />
+
+  <main class="flex-1 w-full">
+    @switch (navService.activeSection()) {
+      @case ('hero') {
+        <!-- Visual de Entrada (Hero interactivo + Prueba Social y Sellos de Confianza) -->
+        <app-split-hero (inspectProperty)="openPropertyDetail($event)" />
+        <app-social-proof />
+      }
+
+      @case ('beneficios') {
+        <div class="transition-opacity duration-300">
+          <app-value-benefits />
+        </div>
+      }
+
+      @case ('como-funciona') {
+        <div class="transition-opacity duration-300">
+          <app-how-it-works />
+        </div>
+      }
+
+      @case ('marketplace') {
+        <div class="transition-opacity duration-300">
+          <app-property-marketplace (inspectProperty)="openPropertyDetail($event)" />
+          <app-market-thermometer />
+        </div>
+      }
+
+      @case ('remodeling') {
+        <div class="transition-opacity duration-300">
+          <app-flip-detail [targetPropertyId]="inspectedProperty()?.id ?? null" />
+        </div>
+      }
+
+      @case ('testimonios') {
+        <div class="transition-opacity duration-300">
+          <app-testimonials />
+        </div>
+      }
+
+      @case ('faq') {
+        <div class="transition-opacity duration-300">
+          <app-faq-section />
+          <app-final-cta />
+        </div>
+      }
+    }
+  </main>
+
+  <!-- Footer Reducido (Evita fugas de tráfico, legal mínimo y CTA repetido) -->
+  <app-footer />
+
+  <!-- Technical & Financial Dossier Modal -->
+  <app-property-detail-modal
+    [isOpen]="isDetailModalOpen()"
+    [property]="inspectedProperty()"
+    (closeModal)="closePropertyDetail()"
+  />
+
+  <!-- Enterprise Role & Auth Modal (Inversor vs. Propietario/Developer) -->
+  <app-auth-modal />
+</div>
+
+
